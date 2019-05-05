@@ -38,6 +38,8 @@ function showPNameResult($pnameResult){
 }
 
 
+// --------------------------- Part of Customer ---------------------------//
+
 function validateTel($Tel){
   if(strlen($Tel)>0&&strlen($Tel)<=20){
     return true;
@@ -86,5 +88,21 @@ function showTelephoneResult($TelResult){
   if(!$TelResult)
       echo 'Invalid Telephone<br>';
 }
+
+// --------------------------- Part of Select Unit ---------------------------//
+
+function validateUnit($Unit){
+  if($Unit>0&&$Unit<=2147483649)
+    return true;
+  else
+    return false;
+}
+
+function showStockUnitResult($UnitResult){
+  if(!$UnitResult)
+      echo 'Invalid Unit<br>';
+}
+
+
 
 ?>

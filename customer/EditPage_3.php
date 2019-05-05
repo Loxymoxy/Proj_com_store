@@ -19,6 +19,7 @@ if($FnameResult&&$LnameResult&&$AddressResult&&$TelResult){
 $connect = mysqli_connect("localhost","root","","computerstore");
 $sql = 'UPDATE customer SET CFirstname="'.$_POST["Fname"].'", CLastname ="'.$_POST["Lname"].'",
 Address= "'.$_POST["address"].'", TEL="'.$_POST["tel"].'" WHERE CustomerID = "'.$_POST["customerid"].'"';
+
 $result = mysqli_query($connect,$sql);
     if(!$result){
                 echo mysqli_error($connect).'<br>';
